@@ -1,9 +1,9 @@
 # si-smart-room
 # UPT - Smart university accommodation room
 
-### Schematics
-**Door lock**
+## Schematics
+###Door lock
 ![Door lock](schematics/lock.png)
 
-**Sensors**
+###Sensors
 ![Sensors](schematics/temperature.png)
