@@ -7,13 +7,13 @@
  - **ESP8266**: Module responsible with database communication. The module communicates with the Arduino board via serial communication in order to check if any person tried to unlock the door and sends the data to the Firebase Realtime Database. This data can be accessed from the Android application.
  - **RFID Sensor**: Module responsible with access card reading. If the card's uid is registered, the user may come in, otherwise the door will not be unlocked.
  - **5v Relay**: Used to power the door lock. It is triggered by Arduino board.
- - **Door lock**
+ - **Door lock**: 12VDC Solenoid door lock
  
  ### Lights
  **_Modules_**
   - **ESP8266**: Module responsible with database communication. It queries the realtime database from Firebase in order to check if a client has changed the state of the lights and if it is changed it transmits to the Arduino board the change and Arduino will switch the lights as the client desires.
   - **5v Relay**: Used to power the ligths. Triggered by Arduino board.
-  - *Lights**: LED bar.
+  - **Lights**: LED bar.
 
 ### Sensors
 **_Modules_**
