@@ -50,4 +50,4 @@ concentration and output voltage.
 ![Sensors](schematics/temperature.png)
 
 ### Lights
-![Lights](schematics/lights.PNG)
+![Lights](schematics/schema.PNG)
