@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SmartRoom</string>
+    <string name="username">username</string>
+    <string name="room_temperature">25</string>
+    <string name="room_humidity">72</string>
+    <string name="dashboard_title">username\'s Dashboard</string>
+</resources>

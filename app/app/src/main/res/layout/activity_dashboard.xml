@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashboardActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/guideline_toolbar"
+        app:layout_constraintGuide_percent="0.15"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/guideline_cardLeft"
+        app:layout_constraintGuide_percent="0.02"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/guideline_cardRight"
+        app:layout_constraintGuide_percent="0.98"/>
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar_dashboard"
+        android:background="@color/colorMegatronEnd"
+        tools:ignore="MissingConstraints">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/logo"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="8dp"
+                />
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/logout"
+                android:id="@+id/iv_logout"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Dashboard"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:fontFamily="monospace"/>
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_logInfo"
+        app:layout_constraintBottom_toTopOf="@id/guideline_toolbar"
+        android:text="Logged in as username"
+        app:layout_constraintRight_toLeftOf="@id/guideline_cardRight"
+        app:layout_constraintLeft_toRightOf="@id/guideline_cardLeft"/>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guideline_toolbar"
+        app:layout_constraintLeft_toRightOf="@id/guideline_cardLeft"
+        app:layout_constraintRight_toLeftOf="@id/guideline_cardRight"
+        android:fillViewport="false"
+        android:paddingBottom="96dp"
+        android:scrollbars="none">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:id="@+id/cardview_doorLockCard"
+            android:layout_height="128dp"
+            app:cardCornerRadius="30dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/door_lock_card_background">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_doorLockCardTitle"
+                    android:text="Door lock"
+                    android:fontFamily="monospace"
+                    android:textStyle="italic"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_centerVertical="true"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_doorLockCardTitle"
+                    android:fontFamily="monospace"
+                    android:textStyle="italic"
+                    android:text="Lock/Unlock using this switch."
+                    android:textColor="#ffffff"
+                    android:layout_marginLeft="16dp"
+                    android:textSize="8sp"/>
+
+                <Switch
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:gravity="end"
+                    android:id="@+id/switch_doorLock"
+                    android:thumb="@drawable/lock"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:id="@+id/cardview_Temperature"
+            android:layout_below="@id/cardview_doorLockCard"
+            android:layout_marginTop="16dp"
+            android:layout_height="128dp"
+            app:cardCornerRadius="30dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/door_lock_card_background">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_Temperature"
+                    android:text="Temperature"
+                    android:fontFamily="monospace"
+                    android:textStyle="italic"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_centerVertical="true"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_Temperature"
+                    android:fontFamily="monospace"
+                    android:textStyle="italic"
+                    android:text="Realtime room temperature."
+                    android:textColor="#ffffff"
+                    android:layout_marginLeft="16dp"
+                    android:textSize="8sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="°C"
+                    android:id="@+id/tv_degrees"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="monospace"
+                    android:textSize="30sp"
+                    android:textColor="#ffffff"
+                    android:layout_marginRight="16dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/room_temperature"
+                    android:fontFamily="monospace"
+                    android:textColor="#ffffff"
+                    android:id="@+id/tv_temperatureValue"
+                    android:layout_toStartOf="@id/tv_degrees"
+                    android:layout_centerVertical="true"
+                    android:textSize="30sp"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:id="@+id/cardview_Humidity"
+            android:layout_below="@id/cardview_Temperature"
+            android:layout_marginTop="16dp"
+            android:layout_height="128dp"
+            app:cardCornerRadius="30dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/door_lock_card_background">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_Humidity"
+                    android:text="Humidity"
+                    android:fontFamily="monospace"
+                    android:textStyle="italic"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_centerVertical="true"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_Humidity"
+                    android:fontFamily="monospace"
+                    android:textStyle="italic"
+                    android:text="Realtime room humidity level."
+                    android:textColor="#ffffff"
+                    android:layout_marginLeft="16dp"
+                    android:textSize="8sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" %"
+                    android:id="@+id/tv_percentage"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="monospace"
+                    android:textSize="30sp"
+                    android:textColor="#ffffff"
+                    android:layout_marginRight="16dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/room_humidity"
+                    android:fontFamily="monospace"
+                    android:textColor="#ffffff"
+                    android:id="@+id/tv_humidityValue"
+                    android:layout_toStartOf="@id/tv_percentage"
+                    android:layout_centerVertical="true"
+                    android:textSize="30sp"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:id="@+id/cardview_lights"
+            android:layout_below="@id/cardview_Humidity"
+            android:layout_marginTop="16dp"
+            android:layout_height="128dp"
+            app:cardCornerRadius="30dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/door_lock_card_background">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_lightsTitle"
+                    android:text="Lights"
+                    android:fontFamily="monospace"
+                    android:textStyle="italic"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_centerVertical="true"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_lightsTitle"
+                    android:fontFamily="monospace"
+                    android:textStyle="italic"
+                    android:text="Turn on the lights remotely using this switch."
+                    android:textColor="#ffffff"
+                    android:layout_marginLeft="16dp"
+                    android:textSize="8sp"/>
+
+                <Switch
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:gravity="end"
+                    android:id="@+id/switch_lights"
+                    android:thumb="@drawable/sun"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/cardview_lights"
+            android:layout_marginTop="32dp"
+            android:textSize="8sp"
+            android:text="© 407B Lockdown"
+            android:fontFamily="monospace"
+            android:textStyle="italic|bold"/>
+    </RelativeLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
