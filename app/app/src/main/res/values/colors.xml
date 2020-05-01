@@ -10,4 +10,11 @@
     <color name="colorMegatronStart">#c6ffdd</color>
     <color name="colorMegatronMid">#fbd786</color>
     <color name="colorMegatronEnd">#f7797d</color>
+    <color name="colorDarkBlue">#000058</color>
+    <color name="colorOrangeRed">#ff4500</color>
+    <color name="colorDarkRed">#8b0000</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorLawrenciumStart">#0f0c29</color>
+    <color name="colorLawrenciumMid">#302b63</color>
+    <color name="colorLawrenciumEnd">#24243e</color>
 </resources>

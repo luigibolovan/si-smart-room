@@ -32,7 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/toolbar_dashboard"
-        android:background="@color/colorMegatronEnd"
+        android:background="@color/colorLawrenciumStart"
         tools:ignore="MissingConstraints">
         <RelativeLayout
             android:layout_width="match_parent"
@@ -44,9 +44,9 @@
                 android:layout_centerInParent="true"
                 android:id="@+id/tv_login"
                 android:text="Login"
-                android:textColor="#ffffff"
+                android:textColor="@color/colorWhite"
                 android:textSize="16sp"
-                android:textStyle="bold"
+                android:textStyle="bold|italic"
                 android:fontFamily="monospace"/>
         </RelativeLayout>
     </androidx.appcompat.widget.Toolbar>
@@ -84,8 +84,8 @@
             android:padding="8dp"
             android:hint="Email"
             android:fontFamily="monospace"
-            android:textColor="#ffffff"
-            android:textColorHint="#ffffff"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorWhite"
             android:background="@drawable/username_background"/>
 
         <EditText
@@ -97,9 +97,9 @@
             android:background="@drawable/username_background"
             android:hint="Password"
             android:fontFamily="monospace"
-            android:textColorHint="#ffffff"
+            android:textColorHint="@color/colorWhite"
             android:inputType="textPassword"
-            android:textColor="#ffffff"
+            android:textColor="@color/colorWhite"
             android:id="@+id/et_password"/>
 
         <Button
@@ -112,9 +112,7 @@
             android:text="Login"
             android:fontFamily="monospace"
             android:textStyle="italic"
-            android:textColor="#ffffff"
-
-            />
+            android:textColor="@color/colorWhite"/>
 
 
 

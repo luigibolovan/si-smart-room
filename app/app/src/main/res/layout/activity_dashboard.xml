@@ -32,34 +32,35 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/toolbar_dashboard"
-        android:background="@color/colorMegatronEnd"
+        android:background="@color/colorLawrenciumStart"
         tools:ignore="MissingConstraints">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <ImageView
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:src="@drawable/logo"
                 android:layout_alignParentStart="true"
-                android:layout_marginLeft="8dp"
-                />
+                android:layout_marginLeft="8dp" />
+
             <ImageView
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:src="@drawable/logout"
                 android:id="@+id/iv_logout"
                 android:layout_alignParentEnd="true"
-                android:layout_marginRight="8dp"/>
+                android:layout_marginEnd="8dp"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="Dashboard"
-            android:textColor="#ffffff"
-            android:textStyle="bold"
-            android:fontFamily="monospace"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Dashboard"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:fontFamily="monospace"/>
         </RelativeLayout>
     </androidx.appcompat.widget.Toolbar>
 
@@ -82,15 +83,15 @@
         android:paddingBottom="96dp"
         android:scrollbars="none">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <androidx.cardview.widget.CardView
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:id="@+id/cardview_doorLockCard"
-            android:layout_height="128dp"
-            app:cardCornerRadius="30dp">
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:id="@+id/cardview_doorLockCard"
+                android:layout_height="128dp"
+                app:cardCornerRadius="30dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -104,9 +105,9 @@
                     android:text="Door lock"
                     android:fontFamily="monospace"
                     android:textStyle="italic"
-                    android:textColor="#ffffff"
+                    android:textColor="@color/colorWhite"
                     android:textSize="20sp"
-                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
                     android:layout_centerVertical="true"
                     />
 
@@ -117,8 +118,8 @@
                     android:fontFamily="monospace"
                     android:textStyle="italic"
                     android:text="Lock/Unlock using this switch."
-                    android:textColor="#ffffff"
-                    android:layout_marginLeft="16dp"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginStart="16dp"
                     android:textSize="8sp"/>
 
                 <Switch
@@ -130,8 +131,7 @@
                     android:thumb="@drawable/lock"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginRight="16dp"
-                />
+                    android:layout_marginRight="16dp" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
@@ -146,7 +146,8 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/door_lock_card_background">
+                android:id="@+id/rlayout_temperatureCard"
+                android:background="@drawable/temperature_card_warm_background">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -155,21 +156,21 @@
                     android:text="Temperature"
                     android:fontFamily="monospace"
                     android:textStyle="italic"
-                    android:textColor="#ffffff"
+                    android:textColor="@color/colorWhite"
                     android:textSize="20sp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_centerVertical="true"
-                    />
+                    android:layout_marginStart="16dp"
+                    android:layout_centerVertical="true" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/tv_Temperature"
+                    android:id="@+id/tv_temperatureCardDescription"
                     android:fontFamily="monospace"
                     android:textStyle="italic"
                     android:text="Realtime room temperature."
-                    android:textColor="#ffffff"
-                    android:layout_marginLeft="16dp"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginStart="16dp"
                     android:textSize="8sp"/>
 
                 <TextView
@@ -181,21 +182,22 @@
                     android:layout_alignParentEnd="true"
                     android:fontFamily="monospace"
                     android:textSize="30sp"
-                    android:textColor="#ffffff"
-                    android:layout_marginRight="16dp"/>
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginEnd="16dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/room_temperature"
                     android:fontFamily="monospace"
-                    android:textColor="#ffffff"
+                    android:textColor="@color/colorWhite"
                     android:id="@+id/tv_temperatureValue"
                     android:layout_toStartOf="@id/tv_degrees"
                     android:layout_centerVertical="true"
                     android:textSize="30sp"/>
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
+
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:id="@+id/cardview_Humidity"
@@ -207,7 +209,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/door_lock_card_background">
+                android:background="@drawable/humidity_card_background">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -216,11 +218,10 @@
                     android:text="Humidity"
                     android:fontFamily="monospace"
                     android:textStyle="italic"
-                    android:textColor="#ffffff"
+                    android:textColor="@color/colorDarkBlue"
                     android:textSize="20sp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_centerVertical="true"
-                    />
+                    android:layout_marginStart="16dp"
+                    android:layout_centerVertical="true" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -229,8 +230,8 @@
                     android:fontFamily="monospace"
                     android:textStyle="italic"
                     android:text="Realtime room humidity level."
-                    android:textColor="#ffffff"
-                    android:layout_marginLeft="16dp"
+                    android:textColor="@color/colorDarkBlue"
+                    android:layout_marginStart="16dp"
                     android:textSize="8sp"/>
 
                 <TextView
@@ -242,15 +243,15 @@
                     android:layout_alignParentEnd="true"
                     android:fontFamily="monospace"
                     android:textSize="30sp"
-                    android:textColor="#ffffff"
-                    android:layout_marginRight="16dp"/>
+                    android:textColor="@color/colorDarkBlue"
+                    android:layout_marginEnd="16dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/room_humidity"
                     android:fontFamily="monospace"
-                    android:textColor="#ffffff"
+                    android:textColor="@color/colorDarkBlue"
                     android:id="@+id/tv_humidityValue"
                     android:layout_toStartOf="@id/tv_percentage"
                     android:layout_centerVertical="true"
@@ -269,7 +270,8 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/door_lock_card_background">
+                android:id="@+id/rlayout_lightsLayout"
+                android:background="@drawable/lights_card_light_background">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -278,9 +280,9 @@
                     android:text="Lights"
                     android:fontFamily="monospace"
                     android:textStyle="italic"
-                    android:textColor="#ffffff"
+                    android:textColor="@color/colorWhite"
                     android:textSize="20sp"
-                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
                     android:layout_centerVertical="true"
                     />
 
@@ -288,11 +290,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/tv_lightsTitle"
+                    android:id="@+id/tv_lightsDescription"
                     android:fontFamily="monospace"
                     android:textStyle="italic"
                     android:text="Turn on the lights remotely using this switch."
-                    android:textColor="#ffffff"
-                    android:layout_marginLeft="16dp"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginStart="16dp"
                     android:textSize="8sp"/>
 
                 <Switch
@@ -304,10 +307,10 @@
                     android:thumb="@drawable/sun"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginRight="16dp"
-                    />
+                    android:layout_marginEnd="16dp" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

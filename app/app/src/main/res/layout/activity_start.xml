@@ -29,6 +29,7 @@
         app:layout_constraintLeft_toRightOf="parent"
         app:layout_constraintRight_toLeftOf="parent"
         android:text="© 407B Lockdown"
+        android:textColor="@color/colorWhite"
         android:textStyle="italic|bold"
         android:fontFamily="monospace"
         app:layout_constraintTop_toBottomOf="@id/guideline_copyrights"
