@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="colorGreenStart">#16a085</color>
+    <color name="colorYellowEnd">#f4d03f</color>
+    <color name="colorReaquaStart">#799f0c</color>
+    <color name="colorReaquaEnd">#acbb78</color>
+    <color name="colorMegatronStart">#c6ffdd</color>
+    <color name="colorMegatronMid">#fbd786</color>
+    <color name="colorMegatronEnd">#f7797d</color>
+    <color name="colorDarkBlue">#000058</color>
+    <color name="colorOrangeRed">#ff4500</color>
+    <color name="colorDarkRed">#8b0000</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorLawrenciumStart">#0f0c29</color>
+    <color name="colorLawrenciumMid">#302b63</color>
+    <color name="colorLawrenciumEnd">#24243e</color>
+</resources>
